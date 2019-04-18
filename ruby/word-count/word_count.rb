@@ -1,7 +1,7 @@
 class Phrase
 
   def initialize(words_in)
-    @word_list = words_in.downcase.scan(/['\w]+/)
+    @word_list = words_in.downcase.scan(/\b[\w']+\b/)
   end
 
   def word_count
