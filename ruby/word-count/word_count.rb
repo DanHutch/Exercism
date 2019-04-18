@@ -5,9 +5,7 @@ class Phrase
   end
 
   def word_count
-    word_counts = Hash.new(0)
-    @word_list.each { |word| word_counts[word] +=1 }
-    word_counts
+    @word_list.each_with_object(Hash.new(0)) { |word, hash| hash[word] +=1 }
   end
 
 end
